@@ -2,19 +2,23 @@ import './css/App.css';
 import { Layout } from 'antd';
 import NavHeader from './components/NavHeader';
 import PageFooter from './components/PageFooter';
-import { Content, Footer, Header } from 'antd/es/layout/layout';
+import RouterConfig from './router/index.jsx';
+
+const {Header, Footer, Content} = Layout;
 
 function App() {
   return (
     <div className='App'>
       {/* 头部 */}
-      <Header>
+      <Header className='header'>
         <NavHeader />
       </Header>
       {/* 匹配的路由 */}
-      <Content></Content>
+      <Content className='content'>
+        <RouterConfig />
+      </Content>
       {/* 尾部 */}
-      <Footer>
+      <Footer className='footer'>
         <PageFooter></PageFooter>
       </Footer>
     </div>
