@@ -2,6 +2,7 @@ import React from "react";
 import "../css/App.css";
 import { Input, Select, Button } from 'antd';
 import { NavLink } from "react-router-dom";
+import LoginAvatar from "../components/LoginAvatar"
 
 const { Search, Group } = Input;
 
@@ -50,7 +51,7 @@ function NavHeader(props) {
       </div>
       {/* 登录 */}
       <div className="loginBtnContainer">
-        <Button type="primary" size="large">注册/登录</Button>
+        <LoginAvatar loginHandle={props.loginHandle}/>
       </div>
     </div>
   );

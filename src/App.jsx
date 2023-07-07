@@ -7,11 +7,17 @@ import RouterConfig from './router/index.jsx';
 const {Header, Footer, Content} = Layout;
 
 function App() {
+
+  // 登录
+  function loginHandle() {
+    
+  }
+
   return (
     <div className='App'>
       {/* 头部 */}
       <Header className='header'>
-        <NavHeader />
+        <NavHeader loginHandle={loginHandle}/>
       </Header>
       {/* 匹配的路由 */}
       <Content className='content'>
