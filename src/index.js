@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 
 import 'antd/dist/antd.min.js'
+import './index.css'
 import zhCN from 'antd/es/locale/zh_CN' // 中文语言包
 import { ConfigProvider } from 'antd'
-
 import { BrowserRouter } from 'react-router-dom'
 // 引入仓库
 import store from './redux/store';

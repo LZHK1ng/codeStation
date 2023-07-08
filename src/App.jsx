@@ -3,14 +3,29 @@ import { Layout } from 'antd';
 import NavHeader from './components/NavHeader';
 import PageFooter from './components/PageFooter';
 import RouterConfig from './router/index.jsx';
+import LoginForm from './components/LoginForm'
+import { useState } from 'react';
 
 const {Header, Footer, Content} = Layout;
 
 function App() {
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // 关闭弹框
+  function closeModal() {
+    setIsModalOpen(false);
+  }
+
+  // 打开弹框
+  function openModal() {
+    setIsModalOpen(true);
+  }
+
   // 登录
   function loginHandle() {
-    
+    console.log('123')
+    openModal();
   }
 
   return (
@@ -27,6 +42,8 @@ function App() {
       <Footer className='footer'>
         <PageFooter></PageFooter>
       </Footer>
+      {/* 弹窗 */}
+      <LoginForm isShow={isModalOpen} closeModal={closeModal} openModal={openModal} />
     </div>
   );
 }

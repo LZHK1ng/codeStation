@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/App.css";
-import { Input, Select, Button } from 'antd';
+import { Input, Select, Button, Space } from 'antd';
 import { NavLink } from "react-router-dom";
 import LoginAvatar from "../components/LoginAvatar"
 
@@ -35,7 +35,7 @@ function NavHeader(props) {
       </nav>
       {/* 搜索 */}
       <div className="searchContainer">
-        <Group compact>
+        <Space.Compact>
           <Select defaultValue="issue" size="large" width={{width: "20%"}}>
             <Select.Option value="issue">问答</Select.Option>
             <Select.Option value="book">书籍</Select.Option>
@@ -47,7 +47,7 @@ function NavHeader(props) {
           size="large"
           style={{width: "80%"}}
         ></Search>
-        </Group>
+        </Space.Compact>
       </div>
       {/* 登录 */}
       <div className="loginBtnContainer">
